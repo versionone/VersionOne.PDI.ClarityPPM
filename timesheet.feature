@@ -5,70 +5,23 @@ Feature: Fill out CA Clarity PPM Timesheets based on effort tracking from Versio
 
 	Background:
 		Given an instance of Clarity PPM named "clarityppm"
-		And an instance of VersionOne named "versionone"
+		And "clarityppm" has open time periods for:
+			| name   | start           | end             |
+			| Week 1 | 2 January 2012  | 8 January 2012  |
+			| Week 2 | 9 January 2012  | 15 January 2012 |
+			| Week 3 | 16 January 2012 | 22 January 2012 |
+			| Week 4 | 23 January 2012 | 29 January 2012 |
+		(<name> is not a Clarity PPM field but is used herein to reference these time periods.)
 
-	Scenario: Reconcile does not show unmatched projects
-		Given a project called "Big Data" in "clarityppm"
-		And a project called "Big Data" in "versionone"
-		And there has not been active integration between the 2 systems
-		When I run the Project Reconciliation Process
-		Then I see "Big Data" in a list of VersionOne projects
-		And the "Big Data" row has no associated Clarity PPM project.
+		And "clarityppm" has a resource named "Danny Developer" with an email address of "danny@mailinator.com"
+		And "clarityppm" has a project named "Call Center" with an ID "1000"
+		And "Call Center Release 1.0" has a task named "Quick Status Check Coding" with ID "CC1T-0001"
 
-	Scenario: Reconcile shows matched projects
-		Given a project called "Call Center" in "clarityppm"
-		And that project has an ID of "1000"
-		And a project called "Call Center" in "versionone"
-		And that project has a Reference value of "1000"
-		When I run the Project Reconciliation Process
-		Then I see "Call Center" in a list of VersionOne projects
-		And the "Call Center" row has an associated Clarity PPM project name of "Call Center".
-
-	Scenario: Reconcile does not show unmatched users
-		Given a resource named "Niku Administrator" in "clarityppm"
-		And that resource has an email address of "v1clarityppm@mailinator.com"
-		And a member named "admin" in "versionone"
-		And that member has a blank email address
-		When I run the Member Reconciliation Process
-		Then I see "admin" in a list of VersionOne Members
-		And the "admin" row has no associated Clarity PPM resource.
-
-	Scenario: Reconcile shows matched users
-		Given a resource named "Danny Developer" in "clarityppm"
-		And that resource has an email address of "andre@mailinator.com"
-		And a member named "Danny Developer" in "versionone"
-		And that member has an email address of "andre@mailinator.com"
-		When I run the Member Reconciliation Process
-		Then I see "Andre Agile" in a list of VersionOne Members
-		And the "Andre Agile" row has an associated Clarity PPM resource name of "Andre Agile".
-
-	Scenario: Reconcile ignores tasks with no ID
-		Given a task named "Sample: Service Change" in "clarityppm"
-		And that task has a blank task ID
-		And a task named "Sample: Service Change" in "versionone"
-		And that task has a blank Reference value
-		When I run the Task Reconciliation Process
-		Then I see "Sample: Service Change" in a list of VersionOne Tasks
-		And the "Sample: Service Change" row has no associated Clarity PPM task.
-		And "Sample: Service Change" does not appear in any row as a Clarity PPM task.
-
-	Scenario: Reconcile does not show unmatched tasks
-		Given a task named "Sample: Build UI" in "clarityppm"
-		And that task has a task ID of "CCT-0001"
-		And a task named "Sample: Build UI" in "versionone"
-		And that task has a blank Reference value
-		When I run the Task Reconciliation Process
-		Then I see "Sample: Build UI" in a list of VersionOne Tasks
-		And the "Sample: Build UI" row has no associated Clarity PPM task.
-
-	Scenario: Reconcile shows matched tasks
-		Given a task named "Sample: Code Review" in "Call Center" in "clarityppm"
-		And that task has a task ID of "CCT-0002"
-		And a task named "Sample: Code Review" in "versionone"
-		And that task has a Reference value of "CCT-0002"
-		When I run the Task Reconciliation Process
-		Then I see "Sample: Code Review" in a list of VersionOne Tasks
-		And the "Sample: Code Review" row has an associated Clarity PPM task name of "Sample: Code Review".
+		Given an instance of VersionOne named "versionone"
+		And "versionone" has a member named "Danny Developer" with an email address of "danny@mailinator.com"
+		And "versionone" has a project named "Sample: Release 1.0" with a Reference value of "1000"
+		And "Sample: Release 1.0" has a story named "Sample: Quick Status Check"
+		And "Sample: Quick Status Check" has a task named "Code" with a Reference value of "CC1T-0001"
 
 	Scenario: Integration does not update timesheets when there are no new actuals
 		Given "versionone" has no Actuals since the last-sync date
@@ -77,38 +30,44 @@ Feature: Fill out CA Clarity PPM Timesheets based on effort tracking from Versio
 		And exits gracefully.
 
 	Scenario: Integration enters time for a single new actual on an empty timesheet
-		Given a task named "Sample: Create Performance Tests" in "Call Center" in "clarityppm"
-		And that task has a task ID of "CCT-0003"
-		And a task named "Sample: Create Performance Tests" in "Call Center" in "versionone"
-		And that task has a Reference value of "CCT-0003"
-		And an actual on that task with a value of "2"
-		And that actual was the only one created after the last-sync date
-		And that actual was logged for the date "Monday, 29 October 2012"
-		And that actual was logged for the member "Danny Developer"
+		Given "Danny Developer" has no time sheet entries on the time sheet for the time period "Week 1" 
+		And "Code" has an actual created after the last-sync date:
+			| date                       | member          | value |
+			| Monday, 2 January 2012     | Danny Developer | 1     |
 		When I run the main integration process
-		Then it finds the time period for "29 October 2012 to 5 November 2012"
-		And it finds the timesheet for "Danny Developer"
-		And it adds a row for "Sample: Create Performance Tests"
-		And it adds "2" in the column for "Monday, 29 October 2012"
+		Then "Danny Developer" has a time sheet entry for the time period "Week 1":
+			| task                      | date                       | value |
+			| Quick Status Check Coding | Monday, 2 January 2012     | 1     |
+
+	Scenario: Integration adds time to an existing entry on a timesheet
+		Given "Danny Developer" has a time sheet entry for "Quick Status Check Coding" with "1" in the column for "Monday, 9 January 2012" on the time sheet for the time period "Week 2"
+		And "Code" has an actual created after the last-sync date:
+			| date                       | member          | value |
+			| Monday, 9 January 2012     | Danny Developer | 7     |
+		When I run the main integration process
+		Then "Danny Developer" has a time sheet entries for the time period "Week 2":
+			| task                      | date                       | value |
+			| Quick Status Check Coding | Monday, 9 January 2012     | 8     |
 
 	Scenario: Integration enters time for multiple actuals on different days
+		Given "Danny Developer" has no time sheet entries on the time sheet for the time period "Week 3"
+		And "Code" has two actuals created after the last-sync date:
+			| date                       | member          | value |
+			| Tuesday, 17 January 2012   | Danny Developer | 6     |
+			| Wednesday, 18 January 2012 | Danny Developer | 5     |
+		When I run the main integration process
+		Then "Danny Developer" has a time sheet entries for the time period "Week 3":
+			| task                      | date                       | value |
+			| Quick Status Check Coding | Tuesday, 17 January 2012   | 6     |
+			| Quick Status Check Coding | Wednesday, 18 January 2012 | 5     |
 
 	Scenario: Integration accumulates time for multiple actuals on the same day
-		Given a task named "Sample: Code Review" in "Call Center" in "clarityppm"
-		And that task has a task ID of "CCT-0002"
-		And a task named "Sample: Code Review" in "Call Center" in "versionone"
-		And that task has a Reference value of "CCT-0002"
-		And two actuals on that task created after the last-sync date
-		And those actuals have <date>, <member>, and <value>
+		Given "Danny Developer" has no time sheet entries on the time sheet for the time period "Week 4"
+		And "Code" has two actuals created after the last-sync date:
+			| date                       | member          | value |
+			| Thursday, 26 January 2012  | Danny Developer | 4     |
+			| Thursday, 26 January 2012  | Danny Developer | 2     |
 		When I run the main integration process
-		Then it finds the time period for "29 October 2012 to 5 November 2012"
-		And it finds the timesheet for "Danny Developer"
-		And it adds a row for "Sample: Create Performance Tests"
-		And it adds "6" in the column for "Monday, 29 October 2012"
-
-		Examples:
-			| date                    | member          | value |
-			| Monday, October 30 2012 | Danny Developer | 4     |
-			| Monday, October 30 2012 | Danny Developer | 2     |
-
-	Scenario: Integration adds time to existing entries on a timesheet when there are new actuals
+		Then "Danny Developer" has a time sheet entries for the time period "Week 4":
+			| task                      | date                       | value |
+			| Quick Status Check Coding | Tuesday, 26 January 2012   | 6     |
