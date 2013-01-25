@@ -1,8 +1,8 @@
 <globalReferences>
   <globalReference>
-    <uri>http://aschwartz-prodl/di/services/design-repo/repositories/Default/projects/ea0f60bc-27aa-4890-8c9b-47ddb8a918d2</uri>
-    <name>VersionOne_Clarity</name>
+    <uri>http://pervasivedi10/di/services/design-repo/repositories/VersionOne/projects/f22a5e94-15a4-4ca8-9b7d-39187a157004</uri>
+    <name>VersionOne_Clarity__3</name>
     <version>trunk</version>
-    <dir>VersionOne_Clarity-trunk</dir>
+    <dir>VersionOne_Clarity__3-trunk</dir>
   </globalReference>
 </globalReferences>

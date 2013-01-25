@@ -46,7 +46,57 @@ a modified BSD license, which reflects our intent that anyone can use the maps a
 
 ## Configuration
 
-The integration requires that there exists a text file on the server that contains the change date of the most recently integrated VersionOne actual.  This date will get updated every time that new actuals are integrated, but when creating the file before the first execution the date should be in a format that VersionOne will understand as part of a where clause in a URL query string, for example `YYYY-MM-DDThh:mm:ss.SSS`. For the first execution it is recommended that you set the date to any arbitrary date in the past that is guaranteed to be before the day that users began logging actuals in VersionOne. It is important to note that the day that the time was logged for is irrelevant, as the integration will pick up any actuals that were added or modified since the date that is saved in the text file.
+### Macros
+
+PDI uses macros for configuration of the workflows and mappings. The following should be configured in PDI as a Macro Set:
+`DATA` - A directory on the PDI server where the integration will place intermediate and output files. It is recommended that this directory be configured as a network share so the reconciliation files can be accessed easily.
+`Clarity_endpoint` - The HTTP URL for the Clarity PPM XOG web service. The default would look something like `http://clarityppm.example.com/niku/xog`.
+`Clarity_username` - The username for PDI to use as credentials for connecting to Clarity PPM.
+`Clarity_password` - The password for the integration to use as credentials for Clarity PPM.
+`VersionOne_endpoint` - The HTTP URL for the VersionOne REST-API web service. The default would look something like `https://www1.v1host.com/v1clarityppm/rest-1.v1/data/`.
+`VersionOne_username` - The username for PDI to use as credentials for connecting to VersionOne.
+`VersionOne_password` - The password for PDI to use as credentials for connecting to VersionOne.
+
+### Datetime File
+
+The integration requires a text file on the server that contains the change date of the most recently integrated VersionOne actual. This date will get updated every time that new actuals are integrated, but when creating the file before the first execution the date should be in a format that VersionOne will understand as part of a where clause in a URL query string, for example `YYYY-MM-DDThh:mm:ss.SSS`. For the first execution it is recommended that you set the date to any arbitrary date in the past that is guaranteed to be before the day that users began logging actuals in VersionOne. It is important to note that the day that the time was logged for is irrelevant, as the integration will pick up any actuals that were added or modified since the date that is saved in the text file.
+
+### Workflow and Mapping Configurations
+
+When working with the workflows and mappings in the PDI Designer, it may be necessary to override development-time configurations. For each process and map, you may need to do the following:
+1. Open the configurations.
+2. Select the default configuration.
+3. On the Macro Set tab, add the Macro Set to the project.
+4. On the Macro tab, make sure all the "Include or Override" options are unchecked (meaning the values are included from the Macro Set).
+5. Save Configuration.
+
+### Fixing Schemas
+
+PDI has a schemas for each Clarity PPM and VersionOne. Customization in either product may require refreshing the schemas so PDI can present an accurate set of fields to be mapped. For each process and map, you may need to:
+1. Open the Map.
+2. Select the Source data set.
+3. Select the menu option for Change Schema.
+4. Click the Change Schema button.
+5. Open the data source.
+6. Click Start Session.
+7. Click Establish Connection.
+8. Save the data source and close its tab.
+9. Back in the change source schema dialog, refresh the schema from the data source.
+10. Save the schema.
+11. Launch designer for the source dataset.
+12. Start Session.
+13. Establish Connection.
+14. Save the dataset.
+25. Save Configuration.
+
+### Fix XSLT
+
+From time to time, PDI "forgets" the XSLT script that normalizes the VersionOne XML. You may need to:
+1. Select the XSLT step.
+2. Re-select the XSLT script.
+3. Open the script.
+4. Click OK.
+5. Save the Process.
 
 ## Troubleshooting
 
