@@ -1,5 +1,6 @@
 <project>
-        <metadata><id>f22a5e94-15a4-4ca8-9b7d-39187a157004</id><name>VersionOne_Clarity__3</name><description></description><keywords>null</keywords><createdBy id="1000">ibuchanan</createdBy><createdDate>2013-01-25T11:09:28.720-05:00</createdDate><updatedBy id="1000">ibuchanan</updatedBy><updatedDate>2013-01-25T12:14:46.364-05:00</updatedDate><inactive>false</inactive></metadata>
+        <metadata><id>7d18e89d-aa7a-48c5-91b5-7c02a96ee4ae</id><name>VersionOne_Clarity</name><description>V1ClarityPPM is a set of maps and processes that can be used as building blocks for integrating VersionOne and Clarity PPM. Original source code and additional documentation can be found at:
+https://github.com/versionone/V1ClarityPPM</description><keywords>null</keywords><createdBy id="1000">ibuchanan</createdBy><createdDate>2013-01-28T10:40:05.521-05:00</createdDate><updatedBy id="1000">ibuchanan</updatedBy><updatedDate>2013-01-28T11:13:09.162-05:00</updatedDate><inactive>false</inactive></metadata>
         <references xmlns:xlink="http://www.w3.org/1999/xlink">
           
         </references>
