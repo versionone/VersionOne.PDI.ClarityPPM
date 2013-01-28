@@ -59,7 +59,7 @@ PDI uses macros for configuration of the workflows and mappings. The following s
 
 ### Datetime File
 
-The integration requires a text file on the server that contains the change date of the most recently integrated VersionOne actual. This date will get updated every time that new actuals are integrated, but when creating the file before the first execution the date should be in a format that VersionOne will understand as part of a where clause in a URL query string, for example `YYYY-MM-DDThh:mm:ss.SSS`. For the first execution it is recommended that you set the date to any arbitrary date in the past that is guaranteed to be before the day that users began logging actuals in VersionOne. It is important to note that the day that the time was logged for is irrelevant, as the integration will pick up any actuals that were added or modified since the date that is saved in the text file.
+The integration requires a tcd ext file on the server that contains the change date of the most recently integrated VersionOne actual. This date will get updated every time that new actuals are integrated, but when creating the file before the first execution the date should be in a format that VersionOne will understand as part of a where clause in a URL query string, for example `YYYY-MM-DDThh:mm:ss.SSS`. For the first execution it is recommended that you set the date to any arbitrary date in the past that is guaranteed to be before the day that users began logging actuals in VersionOne. It is important to note that the day that the time was logged for is irrelevant, as the integration will pick up any actuals that were added or modified since the date that is saved in the text file.
 
 ### Workflow and Mapping Configurations
 
