@@ -38,7 +38,7 @@ a modified BSD license, which reflects our intent that anyone can use the maps a
 *Project Summary*
 
 ## Resource Management
-*Reconcile Resources* - There are no user synchronization processes in this integration; therefore, users in each system are mapped by the convention that VersionOne email address matches the Clarity PPM ID. But both fields can be hand-edited so there is the possibility of error. Again, reconciling is helpful to correct errors and to troubleshoot the integration. The process `p_reconcile_resources` will create a spreadsheet showing VersionOne members mapped to Clarity PPM resources.
+*Reconcile Resources* - There are no user synchronization processes in this integration; therefore, users in each system are mapped by the convention that VersionOne email address matches the Clarity PPM ID. Since both fields can be hand-edited, there is the possibility of error. Again, reconciling is helpful to correct errors and to troubleshoot the integration. The process `p_reconcile_resources` will create a spreadsheet showing VersionOne members mapped to Clarity PPM resources.
 
 *Reconcile Tasks* - Tasks can be mapped by hand, if necessary. Otherwise, reconciliation at this low level should be just for troubleshooting. The process `p_reconcile_tasks` will create a spreadsheet showing VersionOne workitems mapped to Clarity PPM tasks.
 

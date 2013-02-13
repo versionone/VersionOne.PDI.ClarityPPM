@@ -16,7 +16,7 @@ Feature: Fill out CA Clarity PPM Timesheets based on effort tracking from Versio
 		(<name> is not a Clarity PPM field but is used herein to reference these time periods.)
 
 		And "clarityppm" has a resource named "Danny Developer" with an email address of "danny@mailinator.com"
-		And "clarityppm" has a project named "Call Center" with an ID "1000"
+		And "clarityppm" has a project named "Call Center Release 1.0" with an ID "1000"
 		And "Call Center Release 1.0" has a task named "Quick Status Check Coding" with ID "CC1T-0001"
 
 		Given an instance of VersionOne named "versionone"

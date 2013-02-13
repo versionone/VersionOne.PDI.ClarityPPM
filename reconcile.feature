@@ -27,16 +27,16 @@ Feature: Reconcile Clarity PPM and VersionOne objects.
 
 	Scenario: Reconcile does not show unmatched users
 		Given "clarityppm" has a resource named "Niku Administrator" with an email address of "v1clarityppm@mailinator.com"
-		And "versionone" has a member named "admin" with a blank email address
+		And "versionone" has a member named "Administrator" with a blank email address
 		When I run the Member Reconciliation Process
-		Then the output file shows me "admin" has no associated Clarity PPM resource.
+		Then the output file shows me "Administrator" has no associated Clarity PPM resource.
 
 	Scenario: Reconcile shows matched users
 		When I run the Member Reconciliation Process
 		Then the output file shows me "Andre Agile" row has an associated Clarity PPM resource with the name "Andre Agile".
 
 	Scenario: Reconcile ignores tasks with no ID
-		Given "Call Center" has a task named "Team Building" with no ID
+		Given "Call Center Release 2.0" has a task named "Team Building" with no ID
 		When I run the Task Reconciliation Process
 		Then the output file shows me "Team Building" does not appear in any row as an associated Clarity PPM task.
 
