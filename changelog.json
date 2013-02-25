@@ -12,8 +12,12 @@
     ],
     "textLinks": [
         {
+            "title": "Download Latest Preview",
+            "href": "http://platform.versionone.com.s3.amazonaws.com/downloads/v1clarityppm_0.3.2.13.zip"
+        },
+        {
             "title": "Source Code",
-            "href": "http://github/versionone/VesionOne.SDK.NET.APIClient"
+            "href": "https://github.com/versionone/V1ClarityPPM"
         },
         {
             "title": "Documentation",
@@ -30,13 +34,31 @@
             "href": "http://vtv.v1host.com/permalink/?title=Clarity&category=Integrations&edition=enterprise&release=undefined"
         }
     ],
+    "qualitybands": [
+        {
+            "name": "seed",
+            "shortdesc": "The initial idea of a product. No working code.",
+            "href": "https://github.com/versionone/V1ClarityPPM/blob/master/CONTRIBUTING.md#seed"
+        },
+        {
+            "name": "sapling",
+            "shortdesc": "The product is undergoing rapid growth. The code works but expect major changes.",
+            "href": "https://github.com/versionone/V1ClarityPPM/blob/master/CONTRIBUTING.md#sapling"
+        },
+        {
+            "name": "mature",
+            "shortdesc": "The product is stable. The code will continue to evolve with minimum breaking changes.",
+            "href": "https://github.com/versionone/V1ClarityPPM/blob/master/CONTRIBUTING.md#mature"
+        }
+    ],
     "updates": [
         {
-            "date": "2013-02-13T17:45:00.000Z",
-            "qualityband": "incubating",
-            "version": "0.3.2.13",
-            "downloadUrl": "http://platform.versionone.com.s3.amazonaws.com/downloads/v1clarityppm_0.3.2.13.zip",
-            "description": "stabilizing timesheet workflow"
+            "date": "2013-02-13T17:45:00.000Z", // Required
+            "description": "stabilizing timesheet workflow", // Required
+            //"name": "Spring 2013", // Optional
+            "version": "0.3.2.13", // Optional
+            "qualityband": "sapling", // Optional
+            "downloadUrl": "http://platform.versionone.com.s3.amazonaws.com/downloads/v1clarityppm_0.3.2.13.zip" // Optional
         }
     ]
 }
