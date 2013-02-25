@@ -34,20 +34,20 @@
             "href": "http://vtv.v1host.com/permalink/?title=Clarity&category=Integrations&edition=enterprise&release=undefined"
         }
     ],
-    "qualitybands": [
+    "qualityBands": [
         {
             "name": "seed",
-            "shortdesc": "The initial idea of a product. No working code.",
+            "shortDesc": "The initial idea of a product. No working code.",
             "href": "https://github.com/versionone/V1ClarityPPM/blob/master/CONTRIBUTING.md#seed"
         },
         {
             "name": "sapling",
-            "shortdesc": "The product is undergoing rapid growth. The code works but expect major changes.",
+            "shortDesc": "The product is undergoing rapid growth. The code works but expect major changes.",
             "href": "https://github.com/versionone/V1ClarityPPM/blob/master/CONTRIBUTING.md#sapling"
         },
         {
             "name": "mature",
-            "shortdesc": "The product is stable. The code will continue to evolve with minimum breaking changes.",
+            "shortDesc": "The product is stable. The code will continue to evolve with minimum breaking changes.",
             "href": "https://github.com/versionone/V1ClarityPPM/blob/master/CONTRIBUTING.md#mature"
         }
     ],
@@ -55,9 +55,8 @@
         {
             "date": "2013-02-13T17:45:00.000Z", // Required
             "description": "stabilizing timesheet workflow", // Required
-            //"name": "Spring 2013", // Optional
             "version": "0.3.2.13", // Optional
-            "qualityband": "sapling", // Optional
+            "qualityBand": "sapling", // Optional
             "downloadUrl": "http://platform.versionone.com.s3.amazonaws.com/downloads/v1clarityppm_0.3.2.13.zip" // Optional
         }
     ]
