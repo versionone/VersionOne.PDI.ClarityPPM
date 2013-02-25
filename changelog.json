@@ -10,7 +10,7 @@
             "href": "http://support.versionone.com/home"
         }
     ],
-    "textlinks": [
+    "textLinks": [
         {
             "title": "Source Code",
             "href": "http://github/versionone/VesionOne.SDK.NET.APIClient"
@@ -24,7 +24,7 @@
             "href": "https://github.com/versionone/V1ClarityPPM/blob/master/LICENSE.md"
         }
     ],
-    "visuallinks": [
+    "visualLinks": [
         {
             "title": "Video",
             "href": "http://vtv.v1host.com/permalink/?title=Clarity&category=Integrations&edition=enterprise&release=undefined"
