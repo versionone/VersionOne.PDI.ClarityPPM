@@ -2,7 +2,8 @@
     "staticId": "http://versionone.com/v1clarityppm", // Required
     "name": "V1ClarityPPM", // Required
     "source": "VersionOne, Inc.",
-    "description": "V1ClarityPPM is a set of maps and processes for the Pervasive Data Integrator that can be used as building blocks for integrating VersionOne and Clarity PPM. Although these maps and processes require the commercial Pervasive Data Integrator product, the maps and processes themselves are free, licensed under a modified BSD license, which reflects our intent that anyone can use the maps and processes without any obligations.",
+    "summary": "A set of maps and processes for the Pervasive Data Integrator that can be used as building blocks for integrating VersionOne and Clarity PPM.",
+    "description": "In many organizations, there is a tension between agile teams and their program management office (PMO). The agile teams struggle to report their work to the PMO, while the PMO struggles with monitoring agile projects. Both want tools that suit their particular needs but it is rare to find a combination that satisfies both interests. VersionOne's integration with Clarity PPM, built on the Pervasive Data Integrator, helps to ease this tension. The PMO can continue to manage the project in-take process using Clarity PPM's Demand Management features, while populating VersionOne's project structure when agile projects are ready to start. The PMO can maintain the bird's eye view of projects as a portfolio with automated project summary reporting from VersionOne that does not burden project managers with duplicate entry. The PMO can continue to leverage Clarity PPM's Resource Management features by populating time sheets from time-tracking in VersionOne. While these out-of-the-box integration capabilities help reduce the tension, Pervasive Data Integrator makes the integration easy to maintain and extend with visual designers for data mapping and automated workflows. That way, the integration can grow and evolve as both Agile and PPM processes evolve.",
     "cost": "Free",
     "support": [
         {
@@ -13,29 +14,54 @@
     "textLinks": [
         {
             "title": "Download Latest Preview",
+            "icon": "download",
             "href": "http://platform.versionone.com.s3.amazonaws.com/downloads/v1clarityppm_0.3.2.13.zip"
         },
         {
             "title": "Source Code",
+            "icon": "source",
             "href": "https://github.com/versionone/V1ClarityPPM"
         },
         {
             "title": "Documentation",
+            "icon": "documentation",
             "href": "https://github.com/versionone/V1ClarityPPM/blob/master/README.md"
         },
         {
             "title": "Modified BSD (3-clause) License",
+            "icon": "license",
             "href": "https://github.com/versionone/V1ClarityPPM/blob/master/LICENSE.md"
         },
         {
             "title": "Learn more about the Pervasive Data Integrator",
+            "icon": "hyperlink",
             "href": "http://integration.pervasive.com/Products/Pervasive-Data-Integrator.aspx"
         }
     ],
     "visualLinks": [
         {
-            "title": "Video",
+            "title": "Integration Workflows",
+            "href": "https://github.com/versionone/V1ClarityPPM/blob/gh-pages/images/IntegrationWorkflows.PNG?raw=true"
+        },
+        {
+            "title": "Integration Video",
             "href": "http://vtv.v1host.com/permalink/?title=Clarity&category=Integrations&edition=enterprise&release=undefined"
+        },
+        {
+            "title": "Reconcile Projects",
+            "href": "https://github.com/versionone/V1ClarityPPM/blob/gh-pages/images/ReconcileProjects.PNG?raw=true"
+        },
+        {
+            "title": "Project Status Updates",
+            "href": "https://github.com/versionone/V1ClarityPPM/blob/gh-pages/images/ProjectStatusUpdates.PNG?raw=true"
+        },
+        {
+            "title": "Mapping Designer",
+            "href": "https://github.com/versionone/V1ClarityPPM/blob/gh-pages/images/MappingDesigner.PNG?raw=true"
+        },
+        {
+            "title": "Process Designer",
+            "href": "https://github.com/versionone/V1ClarityPPM/blob/gh-pages/images/ProcessDesigner.PNG?raw=true"
         }
     ],
     "qualityBands": [
