@@ -1,13 +1,13 @@
 {
-    "staticId": "http://versionone.com/v1clarityppm",
-    "name": "V1ClarityPPM",
+    "staticId": "http://versionone.com/v1clarityppm", // Required
+    "name": "V1ClarityPPM", // Required
     "source": "VersionOne, Inc.",
     "description": "V1ClarityPPM is a set of maps and processes for the Pervasive Data Integrator that can be used as building blocks for integrating VersionOne and Clarity PPM. Although these maps and processes require the commercial Pervasive Data Integrator product, the maps and processes themselves are free, licensed under a modified BSD license, which reflects our intent that anyone can use the maps and processes without any obligations.",
     "cost": "Free",
     "support": [
         {
-            "title": "Supported by VersionOne",
-            "href": "http://support.versionone.com/home"
+            "title": "Supported by VersionOne", // Required
+            "href": "http://support.versionone.com/home" // Required
         }
     ],
     "textLinks": [
@@ -26,6 +26,10 @@
         {
             "title": "Modified BSD (3-clause) License",
             "href": "https://github.com/versionone/V1ClarityPPM/blob/master/LICENSE.md"
+        },
+        {
+            "title": "Learn more about the Pervasive Data Integrator",
+            "href": "http://integration.pervasive.com/Products/Pervasive-Data-Integrator.aspx"
         }
     ],
     "visualLinks": [

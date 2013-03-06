@@ -119,3 +119,7 @@ The following is a list of fields that must be present in order to write TimePer
 * TimeSheet: ID, resourceID, version, status
 * TimeSheetEntry: internalTaskID AND projectID, OR chargeCodeID, OR assignmentID
 * Actual: actualDate, amount
+
+## Known Issues
+* Does not write back Clarity PPM Task IDs to VersionOne.
+* When timesheet do not exist, the actuals are not written back.

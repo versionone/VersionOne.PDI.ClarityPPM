@@ -1,5 +1,5 @@
 Feature: Reconcile Clarity PPM and VersionOne objects.
-	As an organization with Agile Teams and a PMO,
+	As an organization with Agile Teams using VersionOne and a PMO using Clarity PPM,
 	We want to match up projects, people, and tasks
 	So that integration workflows that depend on cross-product references will be able to operate correctly.
 
