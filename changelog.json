@@ -14,17 +14,17 @@
     "textLinks": [
         {
             "title": "Download Latest Preview",
-            "icon": "download",
+            "type": "download",
             "href": "http://platform.versionone.com.s3.amazonaws.com/downloads/v1clarityppm_0.3.2.13.zip"
         },
         {
             "title": "Source Code",
-            "icon": "source",
+            "type": "source",
             "href": "https://github.com/versionone/V1ClarityPPM"
         },
         {
             "title": "Documentation",
-            "icon": "documentation",
+            "type": "documentation",
             "href": "https://github.com/versionone/V1ClarityPPM/blob/master/README.md"
         },
         {
