@@ -1,4 +1,4 @@
-{
+ {
     "staticId": "http://versionone.com/v1clarityppm", // Required
     "name": "V1ClarityPPM", // Required
     "source": "VersionOne, Inc.",
@@ -14,7 +14,7 @@
     "textLinks": [
         {
             "title": "Download Latest Preview",
-            "type": "download",
+            "type": "download", // Also specifies the icon
             "href": "http://platform.versionone.com.s3.amazonaws.com/downloads/v1clarityppm_0.3.2.13.zip"
         },
         {
