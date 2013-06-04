@@ -1,0 +1,80 @@
+{
+    "id": "VersionOne.V1ClarityPPM",
+    "titleSection": {
+        "name": "V1ClarityPPM",
+        "shortDescription": "Maps and processes for the Pervasive Data Integrator that can be used as building blocks for integrating VersionOne and Clarity PPM.",
+        "pricing": "Free",
+        "support": {
+            "text": "Supported by VersionOne",
+            "href": "http://support.versionone.com/home"
+        }
+    },
+    "descriptionSection": {
+        "description": "In many organizations, there is a tension between agile teams and their program management office (PMO). The agile teams struggle to report their work to the PMO, while the PMO struggles with monitoring agile projects. Both want tools that suit their particular needs but it is rare to find a combination that satisfies both interests. VersionOne's integration with Clarity PPM, built on the Pervasive Data Integrator, helps to ease this tension. The PMO can continue to manage the project in-take process using Clarity PPM's Demand Management features, while populating VersionOne's project structure when agile projects are ready to start. The PMO can maintain the bird's eye view of projects as a portfolio with automated project summary reporting from VersionOne that does not burden project managers with duplicate entry. The PMO can continue to leverage Clarity PPM's Resource Management features by populating time sheets from time-tracking in VersionOne. While these out-of-the-box integration capabilities help reduce the tension, Pervasive Data Integrator makes the integration easy to maintain and extend with visual designers for data mapping and automated workflows. That way, the integration can grow and evolve as both Agile and PPM processes evolve."
+    },
+    "linksSection": [
+        {
+            "type": "download",
+            "title": "Download Latest Preview",
+            "href": "http://platform.versionone.com.s3.amazonaws.com/downloads/v1clarityppm_0.3.2.13.zip"
+        },
+        {
+            "type": "source",
+            "title": "Source Code",
+            "href": "https://github.com/versionone/V1ClarityPPM"
+        },
+        {
+            "type": "documentation",
+            "title": "Documentation",
+            "href": "https://github.com/versionone/V1ClarityPPM/blob/master/README.md"
+        },
+        {
+            "type": "license",
+            "title": "Modified BSD (3-clause) License",
+            "href": "https://github.com/versionone/V1ClarityPPM/blob/master/LICENSE.md"
+        },
+        {
+            "type": "hyperlink",
+            "title": "Learn more about the Pervasive Data Integrator",
+            "href": "http://integration.pervasive.com/Products/Pervasive-Data-Integrator.aspx"
+        }
+    ],
+    "updatesSection": {
+        "updates": [
+            {
+                "date": "2013-02-13T17:45:00.000Z",
+                "description": "Winter 2013",
+                "version": "0.3.2.13",
+                "releaseNotes": "stabilizing timesheet workflow",
+                "qualityBand": "sapling",
+                "downloadUrl": "http://platform.versionone.com.s3.amazonaws.com/downloads/v1clarityppm_0.3.2.13.zip"
+            }
+        ],
+        "qualityBands": [
+            {
+                "name": "seed",
+                "shortDesc": "The initial idea of a product. No working code.",
+                "href": "https://github.com/versionone/V1ClarityPPM/blob/master/CONTRIBUTING.md#seed"
+            },
+            {
+                "name": "sapling",
+                "shortDesc": "The product is undergoing rapid growth. The code works but expect major changes.",
+                "href": "https://github.com/versionone/V1ClarityPPM/blob/master/CONTRIBUTING.md#sapling"
+            },
+            {
+                "name": "mature",
+                "shortDesc": "The product is stable. The code will continue to evolve with minimum breaking changes.",
+                "href": "https://github.com/versionone/V1ClarityPPM/blob/master/CONTRIBUTING.md#mature"
+            }
+        ]
+    },
+    "mediaSection": [
+        {
+            "title": "CA Clarity PPM Integration",
+            "caption": "Load projects into VersionOne using your CA Clarity PPM Demand Management process and keep project summary data up-to-date with Agile execution.",
+            "mimetype": "video/x-flv",
+            "href": "http://vtv.v1host.com/permalink/?title=Clarity&category=Integrations&edition=enterprise&release=undefined",
+            "thumbhref": "http://community.versionone.com/attachments/imagefolder/gettingstarted/video.png"
+        }
+    ]
+}
