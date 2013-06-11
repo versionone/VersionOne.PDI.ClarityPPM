@@ -1,8 +1,8 @@
 {
-    "id": "VersionOne.V1ClarityPPM",
+    "id": "VersionOne.PDI.ClarityPPM",
     "titleSection": {
-        "name": "V1ClarityPPM",
-        "shortDescription": "Maps and processes for the Pervasive Data Integrator that can be used as building blocks for integrating VersionOne and Clarity PPM.",
+        "name": "VersionOne Integration for Clarity PPM",
+        "shortDescription": "maps and processes for the Pervasive Data Integrator that can be used as building blocks for integrating VersionOne and Clarity PPM",
         "pricing": "Free",
         "support": {
             "text": "VersionOne",
@@ -46,24 +46,21 @@
                 "description": "Winter 2013",
                 "version": "0.3.2.13",
                 "releaseNotes": "stabilizing timesheet workflow",
-                "qualityBand": "sapling",
+                "qualityBand": "seed",
                 "downloadUrl": "http://platform.versionone.com.s3.amazonaws.com/downloads/v1clarityppm_0.3.2.13.zip"
             }
         ],
         "qualityBands": [
-            {
-                "name": "seed",
-                "shortDesc": "The initial idea of a product. No working code.",
+            "seed": {
+                "shortDescription": "The initial idea of a product. May not be stable code.",
                 "href": "https://github.com/versionone/V1ClarityPPM/blob/master/CONTRIBUTING.md#seed"
             },
-            {
-                "name": "sapling",
-                "shortDesc": "The product is undergoing rapid growth. The code works but expect major changes.",
+            "sapling": {
+                "shortDescription": "The product is undergoing rapid growth. The code works but expect major changes.",
                 "href": "https://github.com/versionone/V1ClarityPPM/blob/master/CONTRIBUTING.md#sapling"
             },
-            {
-                "name": "mature",
-                "shortDesc": "The product is stable. The code will continue to evolve with minimum breaking changes.",
+            "mature": {
+                "shortDescription": "The product is stable. The code will continue to evolve with minimum breaking changes.",
                 "href": "https://github.com/versionone/V1ClarityPPM/blob/master/CONTRIBUTING.md#mature"
             }
         ]
