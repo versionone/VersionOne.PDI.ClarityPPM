@@ -19,14 +19,14 @@
             "href": "http://platform.versionone.com.s3.amazonaws.com/downloads/v1clarityppm_0.3.2.13.zip"
         },
         {
-            "type": "source",
-            "title": "Source Code",
-            "href": "https://github.com/versionone/VersionOne.PDI.ClarityPPM"
-        },
-        {
             "type": "documentation",
             "title": "Documentation",
             "href": "https://github.com/versionone/VersionOne.PDI.ClarityPPM/blob/master/README.md"
+        },
+        {
+            "type": "source",
+            "title": "Source Code",
+            "href": "https://github.com/versionone/VersionOne.PDI.ClarityPPM"
         },
         {
             "type": "license",
@@ -67,8 +67,14 @@
     },
     "mediaSection": [
         {
-            "title": "CA Clarity PPM Integration",
-            "caption": "Load projects into VersionOne using your CA Clarity PPM Demand Management process and keep project summary data up-to-date with Agile execution.",
+            "title": "Out-of-the-box Workflows",
+            "caption": "Demand Management, Status Reporting, and Resource Management",
+            "mimetype": "image/png",
+            "href": "https://raw.github.com/versionone/VersionOne.PDI.ClarityPPM/master/Workflows.png"
+        },
+        {
+            "title": "Demonstration",
+            "caption": "See the integration sync projects and project status",
             "mimetype": "video/x-flv",
             "href": "http://vtv.v1host.com/permalink/?title=Clarity&category=Integrations&edition=enterprise&release=undefined",
             "thumbhref": "http://community.versionone.com/attachments/imagefolder/gettingstarted/video.png"
