@@ -25,6 +25,8 @@ PPM. Although these maps and processes require the commercial Pervasive Data
 Integrator product, the maps and processes themselves are free, licensed under 
 a modified BSD license, which reflects our intent that anyone can use the maps and processes without any obligations.
 
+![Workflows for VersionOne Integration for Clarity PPM](Workflows.png)
+
 ## Demand Management
 
 *Reconcile Projects* - When you configure the integration for the first time, you will want to reconcile the projects manually. The process `p_reconcile_projects` creates a spreadsheet showing VersionOne projects mapped to Clarity PPM projects. Depending on the usage patterns across the tools, the reconciliation spreadsheet may have many uses:
