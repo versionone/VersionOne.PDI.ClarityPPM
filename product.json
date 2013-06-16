@@ -50,7 +50,7 @@
                 "downloadUrl": "http://platform.versionone.com.s3.amazonaws.com/downloads/VersionOne.PDI.ClarityPPM_0.3.2.13.zip"
             }
         ],
-        "qualityBands": [
+        "qualityBands": {
             "seed": {
                 "shortDescription": "The initial idea of a product. May not be stable code.",
                 "href": "https://github.com/versionone/VersionOne.PDI.ClarityPPM/blob/master/CONTRIBUTING.md#seed"
@@ -63,20 +63,20 @@
                 "shortDescription": "The product is stable. The code will continue to evolve with minimum breaking changes.",
                 "href": "https://github.com/versionone/VersionOne.PDI.ClarityPPM/blob/master/CONTRIBUTING.md#mature"
             }
-        ]
+        }
     },
     "mediaSection": [
         {
             "title": "Out-of-the-box Workflows",
             "caption": "Demand Management, Status Reporting, and Resource Management",
             "mimetype": "image/png",
-            "href": "https://raw.github.com/versionone/VersionOne.PDI.ClarityPPM/master/Workflows.png"
+            "href": "https://raw.github.com/versionone/VersionOne.PDI.ClarityPPM/master/workflows.png"
         },
         {
             "title": "Demonstration",
             "caption": "See the integration sync projects and project status",
             "mimetype": "video/x-flv",
-            "href": "http://vtv.v1host.com/permalink/?title=Clarity&category=Integrations&edition=enterprise&release=undefined",
+            "href": "http://www.versionone.tv.s3.amazonaws.com/Clarity/Clarity.flv",
             "thumbhref": "http://community.versionone.com/attachments/imagefolder/gettingstarted/video.png"
         }
     ]
