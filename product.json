@@ -77,7 +77,7 @@
             "caption": "See the integration sync projects and project status",
             "mimetype": "video/x-flv",
             "href": "http://www.versionone.tv.s3.amazonaws.com/Clarity/Clarity.flv",
-            "thumbhref": "http://community.versionone.com/attachments/imagefolder/gettingstarted/video.png"
+            "thumbhref": "https://raw.github.com/versionone/VersionOne.PDI.ClarityPPM/master/workflows.png"
         }
     ]
 }
