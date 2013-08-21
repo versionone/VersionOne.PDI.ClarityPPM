@@ -2,7 +2,7 @@
     "id": "VersionOne.PDI.ClarityPPM",
     "titleSection": {
         "name": "VersionOne Integration for Clarity PPM",
-        "shortDescription": "maps and processes for the Pervasive Data Integrator that can be used as building blocks for integrating VersionOne and Clarity PPM",
+        "shortDescription": "Maps and processes for the Pervasive Data Integrator that can be used as building blocks for integrating VersionOne and Clarity PPM",
         "pricing": "Free",
         "support": {
             "text": "VersionOne",
@@ -36,7 +36,7 @@
         {
             "type": "hyperlink",
             "title": "Learn more about the Pervasive Data Integrator",
-            "href": "http://integration.pervasive.com/Products/Pervasive-Data-Integrator.aspx"
+            "href": "http://integration.pervasive.com/products/data-integration-software.aspx"
         }
     ],
     "updatesSection": {
