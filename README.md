@@ -25,7 +25,7 @@ PPM. Although these maps and processes require the commercial Pervasive Data
 Integrator product, the maps and processes themselves are free, licensed under
 a modified BSD license, which reflects our intent that anyone can use the maps and processes without any obligations.
 
-![Workflows for VersionOne Integration for Clarity PPM](workflows.png)
+![Workflows for VersionOne Integration for Clarity PPM](workflow.png)
 
 ## Demand Management
 
