@@ -3,7 +3,7 @@
     "titleSection": {
         "name": "VersionOne Integration for Clarity PPM",
         "shortDescription": "Maps and processes for the Pervasive Data Integrator that can be used as building blocks for integrating VersionOne and Clarity PPM",
-        "pricing": "Free",
+        "pricing": "Free (requires Pervasive Data Integrator)",
         "support": {
             "text": "VersionOne",
             "href": "http://support.versionone.com/home"
